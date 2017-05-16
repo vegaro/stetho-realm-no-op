@@ -3,35 +3,12 @@ package com.uphyca.stetho_realm;
 import android.content.Context;
 
 import com.facebook.stetho.InspectorModulesProvider;
-import com.facebook.stetho.Stetho;
 import com.facebook.stetho.inspector.protocol.ChromeDevtoolsDomain;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-/**
- * Stetho へモジュールを組み込むための InspectorModulesProvider です。
- * <p/>
- * Stetho の初期化の際に、{@link #builder(Context)} で作成した RealmInspectorModulesProvider インスタンスを
- * {@link com.facebook.stetho.Stetho.InitializerBuilder#enableWebKitInspector(InspectorModulesProvider)}
- * に渡してください。
- * <p/>
- * <pre>
- *     Stetho.initialize(
- *         Stetho.newInitializerBuilder(this)
- *             .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
- *             .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
- *             .build());
- * </pre>
- * <p/>
- * {@link com.uphyca.stetho_realm.RealmInspectorModulesProvider.ProviderBuilder} の各種メソッドを呼ぶことで
- * メタデータテーブルを表示に含めるかや、データベースファイル名のパターンを指定することができます。
- */
 @SuppressWarnings("unused")
 public class RealmInspectorModulesProvider implements InspectorModulesProvider {
 
