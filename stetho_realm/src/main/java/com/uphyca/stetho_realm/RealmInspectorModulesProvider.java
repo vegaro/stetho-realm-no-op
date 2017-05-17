@@ -3,7 +3,6 @@ package com.uphyca.stetho_realm;
 import android.content.Context;
 
 import com.facebook.stetho.InspectorModulesProvider;
-import com.facebook.stetho.inspector.protocol.ChromeDevtoolsDomain;
 
 import java.io.File;
 import java.util.Map;
@@ -28,11 +27,6 @@ public class RealmInspectorModulesProvider implements InspectorModulesProvider {
                                           boolean ascendingOrder,
                                           byte[] defaultEncryptionKey,
                                           Map<String, byte[]> encryptionKeys) {
-    }
-
-    @Override
-    public Iterable<ChromeDevtoolsDomain> get() {
-        return null;
     }
 
     public static ProviderBuilder builder(Context context) {
@@ -76,7 +70,7 @@ public class RealmInspectorModulesProvider implements InspectorModulesProvider {
             return this;
         }
 
-        public RealmInspectorModulesProvider build() {
+        public InspectorModulesProvider build() {
             return null;
         }
     }
